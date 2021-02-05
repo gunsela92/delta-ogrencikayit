@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Başlıksız Belge</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #4E5869;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Öğe/etiket seçiciler ~~ */
+ul, ol, dl { /* Tarayıcıların arasındaki çeşitlemelerden dolayı, listelerde dolgu ve kenar boşluğunu sıfırlamakta fayda vardır. Tutarlılık sağlamak için, istediğiniz miktarları burada veya içerdikleri liste öğelerinde (LI, DT, DD) belirtebilirsiniz. Burada yaptığınızın siz daha belirli bir seçici yazmadığınız sürece .nav listesine basamaklanacağını unutmayın. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* üst kenar boşluğunu kaldırmak kenar boşluklarının onları içeren div’den kaçabilecekleri bir duruma sebep olur. Kalan alt kenar boşluğu onu takip eden herhangi bir öğeden uzak tutar. */
+	padding-right: 15px;
+	padding-left: 15px; /* div’lerin kendisinin yerine onların içindeki öğelerin kenarlarına dolgu eklemek, herhangi bir kutu modeli matematiğinin olmamasını sağlar. Ayrıca kenar dolgulu bir yuvalanmış div de alternatif bir yöntem olarak kullanılabilir. */
+}
+a img { /* bu seçici, bazı tarayıcılarda görüntü bir bağla çevrelendiğinde görüntünün etrafında görüntülenen varsayılan mavi kenarlığı kaldırır. */
+	border: none;
+}
+
+/* ~~ Sitenizin bağlarının stili, hover efektini oluşturan seçiciler grubu da dahil olmak üzere, şu sırada kalmalıdır. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* bağlarınıza aşırı derecede benzersiz görüneceği şekilde stil vermediğiniz sürece, hızlı görsel tanımlama olabilmesi için yapılabilecek en iyi şey alt çizgi sağlamaktır.  */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* bu seçiciler grubu, bir klavye gezginine fare kullanan bir kişiyle aynı hover (üzerine gelme) deneyimini sağlayacaktır. */
+	text-decoration: none;
+}
+
+/* ~~ bu kap onlara yüzde tabanlı genişliğini veren diğer tüm div’leri çevreler ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* bu mizanpajın büyük bir ekranda fazla geniş olmasını önlemek için bir maksimum genişlik istenebilir. Bu, satır uzunluğunu daha okunabilir hale getirir. IE6 bu bildirimi kabul etmez.  */
+	min-width: 780px;/* bu mizanpajın fazla dar olmasını önlemek için bir minimum genişlik istenebilir. Bu, yan sütunlarda satır uzunluğunu daha okunabilir hale getirir. IE6 bu bildirimi kabul etmez.  */
+	background-color: #FFF;
+	margin: 0 auto; /* kenarlardaki otomatik değer, genişlikle eşleştirildiğinde, mizanpajı ortalar. .container öğesinin genişliğini %100 olacak şekilde ayarlarsanız bu gerekmez. */
+}
+
+/* ~~ üstbilgi belirli bir genişlik değildir. Mizanpajınızın tüm genişliğini uzatır. Sizin kendi bağlı logonuzla değiştirilmesi gereken bir görüntü yer tutucusu içerir ~~ */
+.header {
+	background-color: #6F7D94;
+}
+
+/* ~~ Bunlar mizanpaj sütunlarıdır. ~~  
+
+1) Dolgu yalnızca div’lerin üst ve/veya alt kısmına yerleştirilir. Bu dolguların içindeki öğelerin kenarlarında dolgu vardır. Bu sizi herhangi bir "kutu modeli matematiğinden" kurtarır. Div’in kendisine herhangi bir kenar dolgusu veya kenarlık eklerseniz, bu *toplam* genişliği oluşturmak için tanımladığınız genişliğe eklenir. Ayrıca div’deki öğenin dolgusunu kaldırıp içine genişliği olmayan yeni bir div ve tasarımınız için gerekli olan dolguyu yerleştirmeyi de seçebilirsiniz.
+
+2) Hepsi yüzdürüldüğünden, sütunlara herhangi bir kenar boşluğu eklenmedi. Bir kenar boşluğu eklemeniz gerekiyorsa, onu yüzdürdüğünüz tarafa yerleştirmekten kaçının (örneğin: sağa yüzecek şekilde ayarlanan bir sağ kenar boşluğu). Çoğu zaman, onun yerine dolgu kullanılabilir. Bu kuralın kırılması gereken div’ler için, Internet Explorer’ın çift kenar boşluğuna sahip olduğu bazı sürümlerindeki bir hatayı gidermek amacıyla, div’in kuralına bir "display:inline" bildirimi eklemeniz gerekir.
+
+3) Sınıflar bir belgede bir kereden fazla kullanılabildiği için ( ve bir öğeye de birden çok sınıf uygulanabildiğinden), sütunlara kimlikler yerine sınıf adları eklenmiştir. Örneğin, iki yan çubuk div’i gerektiğinde yığınlanabilir. Tercihiniz buysa, belge başına bir kere kullandığınız sürece bunlar kolaylıkla kimlikler olarak değiştirilebilir.
+
+4) Gezinme çubuğunuzun sağ yerine sol tarafta olmasını tercih ediyorsanız, bu sütunları ters yönde yüzdürmeniz yeterlidir (hepsini sağa yüzdürmek yerine hepsini sola yüzdürmek), böylece onlar ters sırada yüzecektir. Bir HTML kaynağında div’lerin yerini oynatmaya gerek yoktur.
+
+*/
+.sidebar1 {
+	float: right;
+	width: 20%;
+	background-color: #93A5C4;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 80%;
+		float: right;
+}
+
+/* ~~ Bu gruplanan seçici .content alanındaki listeleri verir ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* bu dolgu yukarıda üstbilgilerdeki ve paragraf kuralındaki sağ dolguyu yansıtır. Dolgu, listelerdeki diğer öğeler arasındaki alan için alta ve satırbaşını oluşturmak için sola yerleştirilir. Bunlar istediğiniz gibi ayarlanabilir.  */
+}
+
+/* ~~ Gezinme listesi stilleri (Spry gibi bir önceden yapılmış açılır pencere menüsü kullanmayı tercih ederseniz kaldırılabilir) ~~  */
+ul.nav {
+	list-style: none; /* bu, liste işaretleyicisini kaldırır */
+	border-top: 1px solid #666; /* bu, bağlar için üst kenarlık oluşturur – diğerlerinin tümü LI’da bir alt kenarlık kullanılarak yerleştirilir */
+	margin-bottom: 15px; /* bu aşağıdaki içerikteki gezinmenin arasındaki alanı oluşturur */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* bu düğme ayrımını oluşturur */
+}
+ul.nav a, ul.nav a:visited { /* bu seçicileri gruplamak, bağlarınızın ziyaret edildikten sonra bile düğme görünümünü kaybetmemesini sağlar */
+	padding: 5px 5px 5px 15px;
+	display: block; /* bu, bağa blok özellikleri ekleyerek onu içeren LI’nın tamamının doldurmasını sağlar. Bu, alanın tümünün fare tıklatılmasına tepki vermesini sağlar. */
+	text-decoration: none;
+	background-color: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* bu, fare ve klavye gezginleri için arka plan ve metin rengini değiştirir */
+	background-color: #6F7D94;
+	color: #FFF;
+}
+
+/* ~~ Altbilgi ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #6F7D94;
+	position: relative;/* bu, temizlemenin düzgün olması için IE6’ya hasLayout öğesini verir */
+	clear: both; /* bu temizleme özelliği .container öğesini sütunların nerede bittiğini anlamaya ve onları içermeye zorlar */
+}
+
+/* ~~ çeşitli float/clear sınıfları ~~ */
+.fltrt {  /* bu sınıf bir öğeyi sayfanızın sağında yüzdürmek için kullanılabilir. Yüzen öğe sayfada olması gereken bir sonraki öğeden önce gelmelidir. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* bu sınıf bir öğeyi sayfanızın solunda yüzdürmek için kullanılabilir. Yüzen öğe sayfada olması gereken bir sonraki öğeden önce gelmelidir. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* bu sınıf, #footer kaldırılırsa veya #container öğesinden çıkarılırsa, son yüzdürülen div’i (#container öğesi içinde) takiben bir <br /> veya boş bir div’e yerleştirilebilir */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* 1 pks negatif kenar boşluğu, bu mizanpajdaki sütunların herhangi birine aynı düzeltici etki ile yerleştirilebilir. */
+ul.nav a { zoom: 1; }  /* yakınlaştırma özelliği IE tarayıcısına bağların arasındaki ekstra boşluğu düzeltmesi için gereken hasLayout tetikleyicisini verir */
+</style>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="../girissecim/logo.png" width="420" height="130" /></a> 
+    <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="#">Birinci bağ</a></li>
+      <li><a href="#">İkinci bağ</a></li>
+      <li><a href="#">Üçüncü bağ</a></li>
+      <li><a href="#">Dördüncü bağ</a></li>
+    </ul>
+    <p> Yukarıdaki bağlar, CSS ile stil verilmiş bir sırasız liste kullanarak temel bir gezgin yapısını gösterir. Bunu bir başlangıç noktası olarak kullanın ve kendi benzersiz görünümünüzü oluşturmak için özellikleri değiştirin. Açılır pencere menüleri istiyorsanız, bir Spry menüsü, Adobe Exchange’de bulunan bir menü widget’ı veya diğer javascript ya da CSS çözümlerinden kullanarak kendi menünüzü oluşturun.</p>
+    <p>Gezinmenin üst kısımda olmasını istiyorsanız, ul.nav öğesini sayfanın üst kısmına taşıyıp stili yeniden oluşturun.</p>
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>Talimatlar</h1>
+    <p>Bu mizanpajlara yönelik CSS’nin çok fazla yorum içerdiğini unutmayın. İşinizin çoğunu Tasarım görünümünde yapıyorsanız, sıvı mizanpajlar için CSS ile çalışmayla ilgili ipuçları almak için kodu inceleyin. Sitenizi yayınlamadan önce bu yorumları kaldırabilirsiniz. CSS mizanpajlarında kullanılan teknikler hakkında daha fazla bilgi için Adobe'nin Geliştirici Merkezi’ndeki bu makaleyi okuyun - <a href="http://www.adobe.com/go/adc_css_layouts">http://www.adobe.com/go/adc_css_layouts</a>.</p>
+    <h2>Temizleme Yöntemi</h2>
+    <p>Tüm sütunlar yüzdürüldüğünden, bu mizanpaj .container öğesinde clear:both bildirimini kullanır. Bu temizleme tekniği, .container öğesine yerleştirdiğiniz herhangi bir kenarlık veya arka plan rengini göstermek için .container öğesini sütunların nerede sonlanacağını anlamaya zorlar. Tasarımınız .footer öğesini .container öğesinden kaldırmanızı gerektiriyorsa, farklı bir temizleme yöntemi kullanmanız gerekir. En güvenilir yöntem son yüzdürülen sütununuzdan sonra (ancak .container öğesi kapanmadan önce) bir &lt;br class="clearfloat" /&gt; or &lt;div class="clearfloat"&gt;&lt;/div&gt; eklemek olacaktır. Bu aynı temizleme etkisini sağlar.</p>
+    <h3>Logo Değiştirme</h3>
+    <p>Bu mizanpajda logo yerleştirmek isteyebileceğiniz .header öğesinde bir görüntü yer tutucusu kullanılmış. Yer tutucuyu kaldırıp kendi bağlı logonuzla değiştirmeniz önerilir. </p>
+    <p> SRC alanını kullanarak (yer tutucusunu kaldırmak ve değiştirmek yerine) logo görüntünüzde gezinmek için Özellik Denetimi’ni kullanırsanız satır içi arka planını ve görüntü özelliklerini kaldırmanız gerekir. Bu satır içi stiller yalnızca logo yer tutucusunun tarayıcılarda tanıtım amacıyla görünmesini sağlamak için kullanılır. </p>
+    <p>Satır içi stilleri kaldırmak için, CSS Stilleri panelinizin Geçerli’ye ayarlı olduğundan emin olun. Görüntüyü seçin ve CSS Stilleri panelinin Özellikler bölmesinde, görüntü ve arka plan özelliklerini sağ tıklatıp silin. (Tabii ki, her zaman doğrudan kodun içine girip satır içi stilleri oradaki yer tutucusu veya görüntüden silebilirsiniz.)</p>
+    <h4>Internet Explorer Koşullu Yorumlar	</h4>
+    <p>Bu sıvı mizanpajlar iki sorunu düzeltmek için bir Internet Explorer Koşullu Yorumu (IECC) içerir. </p>
+    <ol>
+      <li>Tarayıcıların yüzde tabanlı mizanpajlarda div boyutlarını yuvarlama şekli tutarsızdır. Tarayıcının 144,5pks veya 564,5pks gibi bir sayı oluşturması gerekiyorsa, onu en yakın tam sayıya yuvarlaması gerekir. Safari ve Opera aşağı yuvarlar, Internet Explorer yukarı yuvarlar ve Firefox kabı tamamen doldurarak bir sütunu yukarı, diğerini aşağı yuvarlar. Bu yuvarlama sorunları bazı mizanpajlarda tutarsızlığa sebep olabilir. Bu IECC’de IE tarayıcısını düzeltmek için bir 1pks’lik negatif kenar boşluğu vardır. Bu boşluğu mizanpaj gereksinimlerinize uyması için sütunların (soldaki veya sağdaki) herhangi birine taşıyabilirsiniz.</li>
+      <li>Bazı durumlarda IE6 ve IE7’de ekstra boşluk oluşturulduğundan, yakınlaştırma özelliği gezinme listesindeki bağlantıya eklendi. Yakınlaştırma, bu sorunu gidermek için IE tarayıcısına özel hasLayout özelliğini verir.</li>
+    </ol>
+    <h4>Arka Planlar</h4>
+    <p>Doğal olarak, herhangi bir div’deki arka plan rengi yalnızca içerik uzunluğu boyunca görünür. Bu, bir yan sütun görünümü oluşturmak için bir arka plan rengi veya kenarlık kullanıyorsanız onun altbilgiye kadar uzanmak yerine içerik sonlandığında biteceği anlamına gelir. .content div’i devamlı daha fazla içeriğe sahip olacaksa, onu sütundan ayırmak için .content div’ine bir kenarlık yerleştirebilirsiniz.</p>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p>Bu .footer öğesi Internet Explorer 6’ya altbilgi için hasLayout öğesi vermek ve düzgün bir şekilde temizleme yapmasını sağlamak için position:relative bildirimini içerir. IE6’yı desteklemeniz gerekmiyorsa, bunu kaldırabilirsiniz.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

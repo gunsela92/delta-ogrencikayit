@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+
+    <!-- #region Jssor Slider Begin -->
+    <!-- Generator: Jssor Slider Maker -->
+    <!-- Source: https://www.jssor.com -->
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-25.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 5000,
+              $PauseOnHover: 3,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 1,
+                $Orientation: 2,
+                $Align: 0,
+                $NoDrag: true
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+        });
+    </script>
+    <style>
+        .jssora052 {display:block;position:absolute;cursor:pointer;}
+        .jssora052 .a {fill:none;stroke:#000;stroke-width:360;stroke-miterlimit:10;}
+        .jssora052:hover {opacity:.8;}
+        .jssora052.jssora052dn {opacity:.5;}
+        .jssora052.jssora052ds {opacity:.3;pointer-events:none;}
+    </style>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:900px;height:600px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:900px;height:600px;overflow:hidden;">
+            <div>
+                <a href="192.168.1.218/uyelik/index.php">
+                    <img data-u="image" src="img/foto1.png" />
+                </a>
+                <div u="thumb">ÖĞRENCI KAYDI VE KAYITLI ÖĞRENCILERI LISTELEYEBILECEĞINIZ WEB TABANLI KAYIT SISTEMI.</div>
+            </div>
+            <div>
+                <a href="192.168.1.218/uyelik/iletisim.php">
+                    <img data-u="image" src="img/foto2.png" />
+                </a>
+                <div u="thumb">ÜYELİK ALMAK İÇİN TIKLAYINIZ. </div>
+            </div>
+            <a data-u="any" href="https://www.jssor.com" style="display:none">carousel slider</a>
+        </div>
+        <!-- Thumbnail Navigator -->
+        <div u="thumbnavigator" style="position:absolute;bottom:0px;left:0px;width:900px;height:50px;color:#FFF;overflow:hidden;cursor:default;background-color:rgba(0,0,0,.5);">
+            <div u="slides">
+                <div u="prototype" style="position:absolute;top:0;left:0;width:900px;height:50px;">
+                    <div u="thumbnailtemplate" style="position:absolute;top:0;left:0;width:100%;height:100%;font-family:verdana;font-weight:normal;line-height:50px;font-size:16px;padding-left:10px;box-sizing:border-box;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora052" style="width:45px;height:45px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora052" style="width:45px;height:45px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <!-- #endregion Jssor Slider End -->
+</body>
+</html>
